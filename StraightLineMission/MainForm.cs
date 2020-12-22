@@ -83,10 +83,14 @@ namespace StraightLineMission
                 CalculationResult result = logic.calculate();
                 displayResult(result);
             }
-            catch
+            catch (System.Security.SecurityException sEx)
+            {
+                toolTipDirectory.Show("I have no permission to read this file", buttonCalculate, 130, 0, 5000);
+            }/*
+            catch (Exception ex)
             {
                 toolTipDirectory.Show("Please check the the directory", buttonCalculate, 130, 0, 5000);
-            }
+            }*/
         }
 
         // displays the result for the user

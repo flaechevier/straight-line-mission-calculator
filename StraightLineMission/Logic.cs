@@ -86,7 +86,12 @@ namespace StraightLineMission
 
             // using cosine theorem; phi is the angle between the line and a line from the start point to the current point
             double cos_phi = (lineLength * lineLength + distanceA * distanceA - distanceB * distanceB) / (2 * lineLength * distanceA);
-            return cos_phi;
+            if (cos_phi > 1) // prevents errors due to rounding
+                return 1;
+            else if (cos_phi < -1)
+                return -1;
+            else
+                return cos_phi;
         }
 
         // calculates the deviation of a point to the line

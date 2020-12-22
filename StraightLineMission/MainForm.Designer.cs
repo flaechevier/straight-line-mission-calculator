@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.maskedTextBoxStartCoord1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxStartCoord2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxEndCoord2 = new System.Windows.Forms.MaskedTextBox();
@@ -68,6 +68,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.labelMaxDeviation = new System.Windows.Forms.Label();
             this.labelMaxDeviationResult = new System.Windows.Forms.Label();
+            this.toolTipAccessDenied = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartHistogram)).BeginInit();
             this.SuspendLayout();
             // 
@@ -345,11 +346,11 @@
             // 
             // chartHistogram
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartHistogram.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chartHistogram.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chartHistogram.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chartHistogram.Legends.Add(legend2);
             this.chartHistogram.Location = new System.Drawing.Point(755, 356);
             this.chartHistogram.Name = "chartHistogram";
             this.chartHistogram.Size = new System.Drawing.Size(541, 326);
@@ -395,6 +396,10 @@
             this.labelMaxDeviationResult.Size = new System.Drawing.Size(31, 20);
             this.labelMaxDeviationResult.TabIndex = 32;
             this.labelMaxDeviationResult.Text = "- m";
+            // 
+            // toolTipAccessDenied
+            // 
+            this.toolTipAccessDenied.ToolTipTitle = "Access Denied";
             // 
             // MainForm
             // 
@@ -482,6 +487,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelMaxDeviation;
         private System.Windows.Forms.Label labelMaxDeviationResult;
+        private System.Windows.Forms.ToolTip toolTipAccessDenied;
     }
 }
 
