@@ -102,7 +102,11 @@ namespace StraightLineMission
             double deltaLong = endPoint.Longitude - startingPoint.Longitude;
             double deltaLat = endPoint.Latitude - startingPoint.Latitude;
             double slope = deltaLat / deltaLong;
-            if (slope*(point.Longitude-startingPoint.Longitude) > point.Latitude-startingPoint.Latitude)
+            if (slope*(point.Longitude-startingPoint.Longitude) < point.Latitude-startingPoint.Latitude)
+            {
+                deviation *= -1;
+            }
+            if (startingPoint.Longitude > endPoint.Longitude) // the direction you walk the line changes left/right
             {
                 deviation *= -1;
             }
